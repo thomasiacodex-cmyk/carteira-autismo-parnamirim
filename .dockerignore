@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+.gstack
+*.db
+*.db-shm
+*.db-wal
+.env
+uploads/*
+logs
+backups
+_vps_backup_*
+tsconfig.tsbuildinfo
+.DS_Store

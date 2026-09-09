@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 84% 5%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 5%;
+    --primary: 210 79% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 47 97% 60%;
+    --secondary-foreground: 222 84% 5%;
+    --muted: 215 16% 47%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 47 97% 60%;
+    --accent-foreground: 222 84% 5%;
+    --destructive: 346 82% 61%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 79% 51%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 79% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 47 97% 60%;
+    --secondary-foreground: 222 84% 5%;
+    --muted: 215 20% 65%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 47 97% 60%;
+    --accent-foreground: 222 84% 5%;
+    --destructive: 346 82% 61%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 210 79% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Accessible focus ring for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid #1E88E5;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .puzzle-gradient {
+    background: linear-gradient(135deg, #1E88E5 0%, #118AB2 100%);
+  }
+  .card-gradient {
+    background: linear-gradient(135deg, #0A4A8A 0%, #0D5BA8 50%, #0A4A8A 100%);
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
